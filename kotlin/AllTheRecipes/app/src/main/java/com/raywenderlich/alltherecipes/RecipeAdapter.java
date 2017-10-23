@@ -12,8 +12,6 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -26,7 +24,7 @@ public class RecipeAdapter extends BaseAdapter {
 
     private Context mContext;
     private LayoutInflater mInflater;
-    private ArrayList<RecipeKotlin> mDataSource;
+    private ArrayList<Recipe> mDataSource;
 
     private static final HashMap<String, Integer> LABEL_COLORS = new HashMap<String, Integer>() {{
         put("Low-Carb", R.color.colorLowCarb);
@@ -37,7 +35,7 @@ public class RecipeAdapter extends BaseAdapter {
         put("Balanced", R.color.colorBalanced);
     }};
 
-    public RecipeAdapter(Context context, ArrayList<RecipeKotlin> items) {
+    public RecipeAdapter(Context context, ArrayList<Recipe> items) {
         mContext = context;
         mDataSource = items;
         mInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -86,7 +84,7 @@ public class RecipeAdapter extends BaseAdapter {
         TextView detailTextView = holder.detailTextView;
         ImageView thumbnailImageView = holder.thumbnailImageView;
 
-        RecipeKotlin recipe = (RecipeKotlin) getItem(position);
+        Recipe recipe = (Recipe) getItem(position);
         titleTextView.setText(recipe.getTitle());
         subtitleTextView.setText(recipe.getDescription());
         detailTextView.setText(recipe.getLabel());

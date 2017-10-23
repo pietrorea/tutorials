@@ -42,11 +42,11 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
 
     mListView = (ListView) findViewById(R.id.recipe_list_view);
-    final ArrayList<RecipeKotlin> recipeList = RecipeKotlin.getRecipesFromFile("recipes.json", this);
+    final ArrayList<Recipe> recipeList = Recipe.getRecipesFromFile("recipes.json", this);
     String[] listItems = new String[recipeList.size()];
 
     for (int i = 0; i < recipeList.size(); i++) {
-      RecipeKotlin recipe = recipeList.get(i);
+      Recipe recipe = recipeList.get(i);
       listItems[i] = recipe.getTitle();
     }
 
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
           @Override
           public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-              RecipeKotlin selectedRecipe = recipeList.get(position);
+              Recipe selectedRecipe = recipeList.get(position);
               Intent detailIntent = new Intent(context, RecipeDetailActivity.class);
               detailIntent.putExtra("title", selectedRecipe.getTitle());
               detailIntent.putExtra("url", selectedRecipe.getInstructionUrl());

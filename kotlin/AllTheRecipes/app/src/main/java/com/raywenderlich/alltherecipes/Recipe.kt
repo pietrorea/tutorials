@@ -1,24 +1,22 @@
 package com.raywenderlich.alltherecipes
 
 import android.content.Context
-import org.json.JSONArray
 import org.json.JSONObject
-import java.io.InputStream
 
 /**
  * Created by pietrorea on 10/22/17.
  */
 
-class RecipeKotlin(val title: String,
-                   val description: String,
-                   val imageUrl: String,
-                   val instructionUrl: String,
-                   val label: String) {
+class Recipe(val title: String,
+             val description: String,
+             val imageUrl: String,
+             val instructionUrl: String,
+             val label: String) {
 
     companion object {
 
-        @JvmStatic fun getRecipesFromFile(fileName: String, context: Context): ArrayList<RecipeKotlin> {
-            var recipeList = ArrayList<RecipeKotlin>()
+        @JvmStatic fun getRecipesFromFile(fileName: String, context: Context): ArrayList<Recipe> {
+            var recipeList = ArrayList<Recipe>()
 
             val jsonString = loadJsonFromAsset("recipes.json", context)
             val json = JSONObject(jsonString)
@@ -27,7 +25,7 @@ class RecipeKotlin(val title: String,
             for (i in 0..recipes.length() - 1) {
 
                 val recipeJson = recipes.getJSONObject(i)
-                val recipe = RecipeKotlin(
+                val recipe = Recipe(
                         recipeJson.getString("title"),
                         recipeJson.getString("description"),
                         recipeJson.getString("image"),
