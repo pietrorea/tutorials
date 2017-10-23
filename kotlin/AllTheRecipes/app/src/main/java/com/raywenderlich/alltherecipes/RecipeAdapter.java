@@ -26,7 +26,7 @@ public class RecipeAdapter extends BaseAdapter {
 
     private Context mContext;
     private LayoutInflater mInflater;
-    private ArrayList<Recipe> mDataSource;
+    private ArrayList<RecipeKotlin> mDataSource;
 
     private static final HashMap<String, Integer> LABEL_COLORS = new HashMap<String, Integer>() {{
         put("Low-Carb", R.color.colorLowCarb);
@@ -37,7 +37,7 @@ public class RecipeAdapter extends BaseAdapter {
         put("Balanced", R.color.colorBalanced);
     }};
 
-    public RecipeAdapter(Context context, ArrayList<Recipe> items) {
+    public RecipeAdapter(Context context, ArrayList<RecipeKotlin> items) {
         mContext = context;
         mDataSource = items;
         mInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -86,12 +86,12 @@ public class RecipeAdapter extends BaseAdapter {
         TextView detailTextView = holder.detailTextView;
         ImageView thumbnailImageView = holder.thumbnailImageView;
 
-        Recipe recipe = (Recipe) getItem(position);
-        titleTextView.setText(recipe.title);
-        subtitleTextView.setText(recipe.description);
-        detailTextView.setText(recipe.label);
+        RecipeKotlin recipe = (RecipeKotlin) getItem(position);
+        titleTextView.setText(recipe.getTitle());
+        subtitleTextView.setText(recipe.getDescription());
+        detailTextView.setText(recipe.getLabel());
 
-        Picasso.with(mContext).load(recipe.imageUrl).placeholder(R.mipmap.ic_launcher).into(thumbnailImageView);
+        Picasso.with(mContext).load(recipe.getImageUrl()).placeholder(R.mipmap.ic_launcher).into(thumbnailImageView);
 
         Typeface titleTypeFace = Typeface.createFromAsset(mContext.getAssets(), "fonts/JosefinSans-Bold.ttf");
         titleTextView.setTypeface(titleTypeFace);
@@ -102,7 +102,7 @@ public class RecipeAdapter extends BaseAdapter {
         Typeface detailTypeFace = Typeface.createFromAsset(mContext.getAssets(), "fonts/Quicksand-Bold.otf");
         detailTextView.setTypeface(detailTypeFace);
 
-        detailTextView.setTextColor(ContextCompat.getColor(mContext, LABEL_COLORS.get(recipe.label)));
+        detailTextView.setTextColor(ContextCompat.getColor(mContext, LABEL_COLORS.get(recipe.getLabel())));
 
         return convertView;
     }
