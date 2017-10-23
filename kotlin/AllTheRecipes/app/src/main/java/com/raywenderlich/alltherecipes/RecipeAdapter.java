@@ -58,12 +58,6 @@ public class RecipeAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-//        View rowView = mInflater.inflate(R.layout.list_item_recipe, parent, false);
-//
-//        TextView titleTextView = (TextView) rowView.findViewById(R.id.recipe_list_title);
-//        TextView subtitleTextView = (TextView) rowView.findViewById(R.id.recipe_list_subtitle);
-//        TextView detailTextView = (TextView) rowView.findViewById(R.id.recipe_list_detail);
-//        ImageView thumbnailImageView = (ImageView) rowView.findViewById(R.id.recipe_list_thumbnail);
 
         ViewHolder holder;
          if (convertView == null) {
