@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
 
-class MainActivityKotlin : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     private var listView: ListView? = null
 
