@@ -15,7 +15,7 @@ class Recipe(val title: String,
 
     companion object {
 
-        @JvmStatic fun getRecipesFromFile(fileName: String, context: Context): ArrayList<Recipe> {
+        fun getRecipesFromFile(fileName: String, context: Context): ArrayList<Recipe> {
             var recipeList = ArrayList<Recipe>()
 
             val jsonString = loadJsonFromAsset("recipes.json", context)

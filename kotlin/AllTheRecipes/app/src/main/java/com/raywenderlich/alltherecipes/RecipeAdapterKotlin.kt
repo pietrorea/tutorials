@@ -2,6 +2,7 @@ package com.raywenderlich.alltherecipes
 
 import android.content.Context
 import android.graphics.Typeface
+import android.support.v4.content.ContextCompat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,12 +10,22 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import com.squareup.picasso.Picasso
+import java.util.HashMap
 
 /**
  * Created by pietrorea on 10/22/17.
  */
 
 class RecipeAdapterKotlin(context: Context, dataSource: ArrayList<Recipe>): BaseAdapter() {
+
+    companion object {
+        private val LABEL_COLORS: HashMap<String, Int> =
+                hashMapOf("Low-Carb" to R.color.colorLowCarb,
+                        "Low-Fat" to R.color.colorLowFat,
+                        "Low-Sodium" to R.color.colorLowSodium,
+                        "Vegetarian" to R.color.colorVegetarian,
+                        "Balance" to  R.color.colorBalanced)
+    }
 
     private var context = context
     private var dataSource = dataSource
@@ -75,6 +86,11 @@ class RecipeAdapterKotlin(context: Context, dataSource: ArrayList<Recipe>): Base
 
         val detailTypeFace = Typeface.createFromAsset(context.assets, "fonts/Quicksand-Bold.otf")
         detailTextView.typeface = detailTypeFace
+
+        val colorId: Int? = LABEL_COLORS.get(recipe.label)
+        if (colorId != null) {
+            detailTextView.setTextColor(ContextCompat.getColor(context, colorId!!))
+        }
 
         return viewToReturn
     }
