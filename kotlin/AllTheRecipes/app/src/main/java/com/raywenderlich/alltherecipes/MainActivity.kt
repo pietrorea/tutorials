@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
             listItems.add(recipe.title)
         }
 
-        val adapter = RecipeAdapterKotlin(this, recipeList)
+        val adapter = RecipeAdapter(this, recipeList)
         listView?.adapter = adapter
 
         listView?.setOnItemClickListener { adapterView, view, position, id ->

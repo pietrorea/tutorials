@@ -16,7 +16,7 @@ import java.util.HashMap
  * Created by pietrorea on 10/22/17.
  */
 
-class RecipeAdapterKotlin(context: Context, dataSource: ArrayList<Recipe>): BaseAdapter() {
+class RecipeAdapter(context: Context, dataSource: ArrayList<Recipe>): BaseAdapter() {
 
     companion object {
         private val LABEL_COLORS: HashMap<String, Int> =
