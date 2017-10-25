@@ -49,17 +49,11 @@ class RecipeAdapter(context: Context, dataSource: ArrayList<Recipe>): BaseAdapte
     private var dataSource = dataSource
     private var inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
-    override fun getCount(): Int {
-        return dataSource.size
-    }
+    override fun getCount(): Int = dataSource.size
 
-    override fun getItem(position: Int): Any {
-        return dataSource.get(position)
-    }
+    override fun getItem(position: Int): Any = dataSource[position]
 
-    override fun getItemId(position: Int): Long {
-        return position.toLong()
-    }
+    override fun getItemId(position: Int): Long = position.toLong()
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
 

@@ -36,7 +36,7 @@ class Recipe(val title: String,
         fun getRecipesFromFile(fileName: String, context: Context): ArrayList<Recipe> {
             var recipeList = ArrayList<Recipe>()
 
-            val jsonString = loadJsonFromAsset("recipes.json", context)
+            val jsonString = loadJsonFromAsset(fileName, context)
             val json = JSONObject(jsonString)
             val recipes = json.getJSONArray("recipes")
 
@@ -57,15 +57,13 @@ class Recipe(val title: String,
             return recipeList
         }
 
-        fun loadJsonFromAsset(fileName: String, context: Context): String {
+        private fun loadJsonFromAsset(fileName: String, context: Context): String {
 
             val inputStream = context.assets.open(fileName)
 
-            val inputAsString = inputStream.bufferedReader().use {
+            return inputStream.bufferedReader().use {
                 it.readText()
             }
-
-            return inputAsString
         }
     }
 

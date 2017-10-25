@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
         listView = findViewById(R.id.recipe_list_view) as ListView
         val recipeList = Recipe.getRecipesFromFile("recipes.json", this)
-        var listItems = ArrayList<String>()
+        var listItems: ArrayList<String> = ArrayList<String>()
 
         for (recipe: Recipe in recipeList) {
             listItems.add(recipe.title)
@@ -46,8 +46,8 @@ class MainActivity : AppCompatActivity() {
         val adapter = RecipeAdapter(this, recipeList)
         listView?.adapter = adapter
 
-        listView?.setOnItemClickListener { adapterView, view, position, id ->
-            val selectedRecipe = recipeList.get(position)
+        listView?.setOnItemClickListener { _, _, position, _ ->
+            val selectedRecipe = recipeList[position]
             val detailIntent = Intent(this, RecipeDetailActivity::class.java)
             detailIntent.putExtra("title", selectedRecipe.title)
             detailIntent.putExtra("url", selectedRecipe.instructionUrl)
