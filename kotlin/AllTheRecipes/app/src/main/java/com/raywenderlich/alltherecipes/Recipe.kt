@@ -22,7 +22,7 @@ class Recipe(val title: String,
             val json = JSONObject(jsonString)
             val recipes = json.getJSONArray("recipes")
 
-            for (i in 0..recipes.length() - 1) {
+            for (i in 0 until recipes.length()) {
 
                 val recipeJson = recipes.getJSONObject(i)
                 val recipe = Recipe(
