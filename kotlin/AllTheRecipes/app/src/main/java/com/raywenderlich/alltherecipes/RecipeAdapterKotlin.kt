@@ -1,6 +1,7 @@
 package com.raywenderlich.alltherecipes
 
 import android.content.Context
+import android.graphics.Typeface
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -65,6 +66,15 @@ class RecipeAdapterKotlin(context: Context, dataSource: ArrayList<Recipe>): Base
         detailTextView.text = recipe.label
 
         Picasso.with(context).load(recipe.imageUrl).placeholder(R.mipmap.ic_launcher).into(thumbnailImageView)
+
+        val titleTypeFace = Typeface.createFromAsset(context.assets,  "fonts/JosefinSans-Bold.ttf")
+        titleTextView.typeface = titleTypeFace
+
+        val subtitleTypeFace = Typeface.createFromAsset(context.assets, "fonts/JosefinSans-SemiBoldItalic.ttf")
+        subtitleTextView.typeface = subtitleTypeFace
+
+        val detailTypeFace = Typeface.createFromAsset(context.assets, "fonts/Quicksand-Bold.otf")
+        detailTextView.typeface = detailTypeFace
 
         return viewToReturn
     }
