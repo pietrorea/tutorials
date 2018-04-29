@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5DAF8FFA1AF403640068C264"
-               BuildableName = "Rage.app"
-               BlueprintName = "Rage"
-               ReferencedContainer = "container:Rage.xcodeproj">
+               BuildableName = "RazeFaces.app"
+               BlueprintName = "RazeFaces"
+               ReferencedContainer = "container:RazeFaces.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5DAF8FFA1AF403640068C264"
-            BuildableName = "Rage.app"
-            BlueprintName = "Rage"
-            ReferencedContainer = "container:Rage.xcodeproj">
+            BuildableName = "RazeFaces.app"
+            BlueprintName = "RazeFaces"
+            ReferencedContainer = "container:RazeFaces.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5DAF8FFA1AF403640068C264"
-            BuildableName = "Rage.app"
-            BlueprintName = "Rage"
-            ReferencedContainer = "container:Rage.xcodeproj">
+            BuildableName = "RazeFaces.app"
+            BlueprintName = "RazeFaces"
+            ReferencedContainer = "container:RazeFaces.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5DAF8FFA1AF403640068C264"
-            BuildableName = "Rage.app"
-            BlueprintName = "Rage"
-            ReferencedContainer = "container:Rage.xcodeproj">
+            BuildableName = "RazeFaces.app"
+            BlueprintName = "RazeFaces"
+            ReferencedContainer = "container:RazeFaces.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

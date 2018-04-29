@@ -90,9 +90,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5DAF8FFA1AF403640068C264 /* Rage */ = {
+		5DAF8FFA1AF403640068C264 /* RazeFaces */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5DAF901C1AF403640068C264 /* Build configuration list for PBXNativeTarget "Rage" */;
+			buildConfigurationList = 5DAF901C1AF403640068C264 /* Build configuration list for PBXNativeTarget "RazeFaces" */;
 			buildPhases = (
 				5DAF8FF71AF403640068C264 /* Sources */,
 				5DAF8FF81AF403640068C264 /* Frameworks */,
@@ -102,7 +102,7 @@
 			);
 			dependencies = (
 			);
-			name = Rage;
+			name = RazeFaces;
 			productName = inappragedemo;
 			productReference = 5DAF8FFB1AF403640068C264 /* RazeFaces.app */;
 			productType = "com.apple.product-type.application";
@@ -130,7 +130,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5DAF8FF61AF403640068C264 /* Build configuration list for PBXProject "Rage" */;
+			buildConfigurationList = 5DAF8FF61AF403640068C264 /* Build configuration list for PBXProject "RazeFaces" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -143,7 +143,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5DAF8FFA1AF403640068C264 /* Rage */,
+				5DAF8FFA1AF403640068C264 /* RazeFaces */,
 			);
 		};
 /* End PBXProject section */
@@ -317,7 +317,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5DAF8FF61AF403640068C264 /* Build configuration list for PBXProject "Rage" */ = {
+		5DAF8FF61AF403640068C264 /* Build configuration list for PBXProject "RazeFaces" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5DAF901A1AF403640068C264 /* Debug */,
@@ -326,7 +326,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5DAF901C1AF403640068C264 /* Build configuration list for PBXNativeTarget "Rage" */ = {
+		5DAF901C1AF403640068C264 /* Build configuration list for PBXNativeTarget "RazeFaces" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5DAF901D1AF403640068C264 /* Debug */,
