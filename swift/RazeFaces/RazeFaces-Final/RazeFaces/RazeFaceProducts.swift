@@ -26,39 +26,17 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import StoreKit
+import Foundation
 
-public typealias ProductIdentifier = String
-public typealias ProductsRequestCompletionHandler = (_ success: Bool, _ products: [SKProduct]?) -> ()
+public struct RazeFaceProducts {
+  
+  public static let SwiftShopping = "com.razeware.razefaces.swiftshopping"
+  
+  fileprivate static let productIdentifiers: Set<ProductIdentifier> = [RazeFaceProducts.SwiftShopping]
 
-open class IAPHelper : NSObject  {
-  
-  static let IAPHelperPurchaseNotification = "IAPHelperPurchaseNotification"
-  
-  public init(productIds: Set<ProductIdentifier>) {
-    super.init()
-  }
+  public static let store = IAPHelper(productIds: RazeFaceProducts.productIdentifiers)
 }
 
-// MARK: - StoreKit API
-
-extension IAPHelper {
-  
-  public func requestProducts(_ completionHandler: ProductsRequestCompletionHandler) {
-    completionHandler(false, [])
-  }
-
-  public func buyProduct(_ product: SKProduct) {
-  }
-
-  public func isProductPurchased(_ productIdentifier: ProductIdentifier) -> Bool {
-    return false
-  }
-  
-  public class func canMakePayments() -> Bool {
-    return true
-  }
-  
-  public func restorePurchases() {
-  }
+func resourceNameForProductIdentifier(_ productIdentifier: String) -> String? {
+  return productIdentifier.components(separatedBy: ".").last
 }
