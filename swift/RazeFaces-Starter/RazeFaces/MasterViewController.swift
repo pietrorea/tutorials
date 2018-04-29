@@ -88,7 +88,7 @@ class MasterViewController: UITableViewController {
     reload()
   }
   
-  func reload() {
+  @objc func reload() {
     products = []
     
     tableView.reloadData()
@@ -104,11 +104,11 @@ class MasterViewController: UITableViewController {
     }
   }
   
-  func restoreTapped(_ sender: AnyObject) {
+  @objc func restoreTapped(_ sender: AnyObject) {
     RazeFaceProducts.store.restorePurchases()
   }
 
-  func handlePurchaseNotification(_ notification: Notification) {
+  @objc func handlePurchaseNotification(_ notification: Notification) {
     guard let productID = notification.object as? String else { return }
     
     for (index, product) in products.enumerated() {
