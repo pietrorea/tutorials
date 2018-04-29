@@ -26,60 +26,17 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import UIKit
-import StoreKit
+import Foundation
 
-class ProductCell: UITableViewCell {
-  static let priceFormatter: NumberFormatter = {
-    let formatter = NumberFormatter()
-    
-    formatter.formatterBehavior = .behavior10_4
-    formatter.numberStyle = .currency
-    
-    return formatter
-  }()
+public struct RazeFaceProducts {
   
-  var buyButtonHandler: ((_ product: SKProduct) -> ())?
+  public static let GirlfriendOfDrummerRage = "GirlfriendOfDrummerRage"
   
-  var product: SKProduct? {
-    didSet {
-      guard let product = product else { return }
-      
-      textLabel?.text = product.localizedTitle
-      
-      if RazeFaceProducts.store.isProductPurchased(product.productIdentifier) {
-        accessoryType = .checkmark
-        accessoryView = nil
-        detailTextLabel?.text = ""
-      } else {
-        ProductCell.priceFormatter.locale = product.priceLocale
-        detailTextLabel?.text = ProductCell.priceFormatter.string(from: product.price)
-        
-        accessoryType = .none
-        accessoryView = newBuyButton()
-      }
-    }
-  }
-  
-  override func prepareForReuse() {
-    super.prepareForReuse()
-    
-    textLabel?.text = ""
-    detailTextLabel?.text = ""
-    accessoryView = nil
-  }
-  
-  func newBuyButton() -> UIButton {
-    let button = UIButton(type: .system)
-    button.setTitleColor(tintColor, for: UIControlState())
-    button.setTitle("Buy", for: UIControlState())
-    button.addTarget(self, action: #selector(ProductCell.buyButtonTapped(_:)), for: .touchUpInside)
-    button.sizeToFit()
-    
-    return button
-  }
-  
-  func buyButtonTapped(_ sender: AnyObject) {
-    buyButtonHandler?(product!)
-  }
+  fileprivate static let productIdentifiers: Set<ProductIdentifier> = [RazeFaceProducts.GirlfriendOfDrummerRage]
+
+  public static let store = IAPHelper(productIds: RazeFaceProducts.productIdentifiers)
+}
+
+func resourceNameForProductIdentifier(_ productIdentifier: String) -> String? {
+  return productIdentifier.components(separatedBy: ".").last
 }

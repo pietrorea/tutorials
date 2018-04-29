@@ -15,12 +15,12 @@
 		64D62BE61C121CFD0059469C /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D62BDA1C121CFD0059469C /* IAPHelper.swift */; };
 		64D62BE71C121CFD0059469C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64D62BDB1C121CFD0059469C /* Images.xcassets */; };
 		64D62BEA1C121CFD0059469C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D62BDE1C121CFD0059469C /* MasterViewController.swift */; };
-		64D62BEC1C121CFD0059469C /* RageProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D62BE01C121CFD0059469C /* RageProducts.swift */; };
+		64D62BEC1C121CFD0059469C /* RazeFaceProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D62BE01C121CFD0059469C /* RazeFaceProducts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		17A72B6E1C503F36007E18ED /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductCell.swift; path = Rage/ProductCell.swift; sourceTree = SOURCE_ROOT; };
-		5DAF8FFB1AF403640068C264 /* Rage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DAF8FFB1AF403640068C264 /* RazeFaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RazeFaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64180AAA1C18883300626C11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Rage/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
 		64180AAC1C18883300626C11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Rage/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		64D62BD61C121CFD0059469C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Rage/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
@@ -29,7 +29,7 @@
 		64D62BDB1C121CFD0059469C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Rage/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		64D62BDC1C121CFD0059469C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Rage/Info.plist; sourceTree = SOURCE_ROOT; };
 		64D62BDE1C121CFD0059469C /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterViewController.swift; path = Rage/MasterViewController.swift; sourceTree = SOURCE_ROOT; };
-		64D62BE01C121CFD0059469C /* RageProducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RageProducts.swift; path = Rage/RageProducts.swift; sourceTree = SOURCE_ROOT; };
+		64D62BE01C121CFD0059469C /* RazeFaceProducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RazeFaceProducts.swift; path = Rage/RazeFaceProducts.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 		5DAF8FFC1AF403640068C264 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5DAF8FFB1AF403640068C264 /* Rage.app */,
+				5DAF8FFB1AF403640068C264 /* RazeFaces.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,7 +66,7 @@
 			children = (
 				64D62BD61C121CFD0059469C /* AppDelegate.swift */,
 				64D62BDA1C121CFD0059469C /* IAPHelper.swift */,
-				64D62BE01C121CFD0059469C /* RageProducts.swift */,
+				64D62BE01C121CFD0059469C /* RazeFaceProducts.swift */,
 				64D62BDE1C121CFD0059469C /* MasterViewController.swift */,
 				64D62BD81C121CFD0059469C /* DetailViewController.swift */,
 				17A72B6E1C503F36007E18ED /* ProductCell.swift */,
@@ -104,7 +104,7 @@
 			);
 			name = Rage;
 			productName = inappragedemo;
-			productReference = 5DAF8FFB1AF403640068C264 /* Rage.app */;
+			productReference = 5DAF8FFB1AF403640068C264 /* RazeFaces.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -167,7 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64D62BE21C121CFD0059469C /* AppDelegate.swift in Sources */,
-				64D62BEC1C121CFD0059469C /* RageProducts.swift in Sources */,
+				64D62BEC1C121CFD0059469C /* RazeFaceProducts.swift in Sources */,
 				64D62BE61C121CFD0059469C /* IAPHelper.swift in Sources */,
 				17A72B6F1C503F36007E18ED /* ProductCell.swift in Sources */,
 				64D62BEA1C121CFD0059469C /* MasterViewController.swift in Sources */,
@@ -292,8 +292,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/Rage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.Rage;
-				PRODUCT_NAME = Rage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.RazeFaces;
+				PRODUCT_NAME = RazeFaces;
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
 			};
@@ -307,8 +307,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/Rage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.Rage;
-				PRODUCT_NAME = Rage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.RazeFaces;
+				PRODUCT_NAME = RazeFaces;
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
 			};
