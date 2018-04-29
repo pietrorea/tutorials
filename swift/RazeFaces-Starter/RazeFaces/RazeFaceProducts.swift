@@ -30,9 +30,9 @@ import Foundation
 
 public struct RazeFaceProducts {
   
-  public static let GirlfriendOfDrummerRage = "GirlfriendOfDrummerRage"
+  public static let SwiftShopping = "SwiftShopping"
   
-  fileprivate static let productIdentifiers: Set<ProductIdentifier> = [RazeFaceProducts.GirlfriendOfDrummerRage]
+  fileprivate static let productIdentifiers: Set<ProductIdentifier> = [RazeFaceProducts.SwiftShopping]
 
   public static let store = IAPHelper(productIds: RazeFaceProducts.productIdentifiers)
 }
