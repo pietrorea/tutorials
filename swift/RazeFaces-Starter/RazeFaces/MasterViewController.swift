@@ -66,7 +66,7 @@ class MasterViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    title = "Rage"
+    title = "RazeFaces"
     
     refreshControl = UIRefreshControl()
     refreshControl?.addTarget(self, action: #selector(MasterViewController.reload), for: .valueChanged)
